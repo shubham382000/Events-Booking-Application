@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&family=Ubuntu&display=swap');
+
+body{
+  margin: 0;
+}
+*{
+  font-family: 'PT Sans', sans-serif;
+font-family: 'Ubuntu', sans-serif;  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

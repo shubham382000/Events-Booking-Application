@@ -6,13 +6,7 @@ const cors = require('cors');
 
 
 // configuring cors 
-app.use(
-    cors({
-        allowedHeaders: "*",
-        allowMethods: "*",
-        origin: "*",
-    })
-);
+app.use(cors());
 
 // configure express to receive form data 
 
@@ -37,7 +31,11 @@ mongoose.connect(process.env.MONGO_DB_URL).then((response) => {
 
 // basic request 
 
-app.get('/',cors(),  (request, response) => {
+app.get('/',cors({
+    allowedHeaders: "*",
+    allowMethods: "*",
+    origin: "*",
+}),  (request, response) => {
     response.send(`<h2>Welcome to Events Booking Application</h2>`);
 });
 

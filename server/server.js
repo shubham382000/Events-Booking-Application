@@ -6,7 +6,9 @@ const cors = require('cors');
 
 
 // configuring cors 
-app.use(cors()); 
+app.use(cors(
+   {origin : 'https://events-booking0.netlify.app/'}
+)); 
 
 // configure express to receive form data 
 

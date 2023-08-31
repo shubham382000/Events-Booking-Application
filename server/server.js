@@ -10,7 +10,9 @@ app.use(cors());
 
 // configure express to receive form data 
 
-app.use(express.json()); 
+app.use(express.json(
+    
+)); 
 
 // configure dotenv 
 

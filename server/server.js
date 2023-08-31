@@ -16,9 +16,7 @@ app.use(
 
 // configure express to receive form data 
 
-app.use(express.json(
-
-));
+app.use(express.json());
 
 // configure dotenv 
 
@@ -39,7 +37,7 @@ mongoose.connect(process.env.MONGO_DB_URL).then((response) => {
 
 // basic request 
 
-app.get('/', (request, response) => {
+app.get('/',cors(),  (request, response) => {
     response.send(`<h2>Welcome to Events Booking Application</h2>`);
 });
 
